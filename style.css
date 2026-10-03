@@ -1,0 +1,1531 @@
+/* =========================================
+   JUSTREPORT
+   Minimal Elegant Theme
+
+   Deep Teal  #122023
+   Lime       #E1FCAD
+   Fog Gray   #E9E9E9
+   White      #FFFFFF
+   ========================================= */
+
+
+/* =========================================
+   COLORS
+   ========================================= */
+
+:root {
+
+    --deep-teal: #122023;
+
+    --lime: #e1fcad;
+
+    --fog: #e9e9e9;
+
+    --white: #ffffff;
+
+    --soft-black: #1b2527;
+
+    --muted: #6d7779;
+
+    --border: #d5dada;
+}
+
+
+/* =========================================
+   RESET
+   ========================================= */
+
+* {
+
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--white);
+
+    color: var(--deep-teal);
+
+    line-height: 1.5;
+}
+
+
+button {
+
+    font: inherit;
+}
+
+
+.container {
+
+    width:
+        min(
+            1100px,
+            calc(100% - 40px)
+        );
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.header {
+
+    background: var(--white);
+
+    border-bottom:
+        1px solid
+        var(--fog);
+}
+
+
+.header-content {
+
+    height: 76px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* Logo */
+
+.logo {
+
+    color: var(--deep-teal);
+
+    text-decoration: none;
+
+    font-size: 1.45rem;
+
+    font-weight: 800;
+
+    letter-spacing: -0.04em;
+}
+
+
+/* Small lime mark */
+
+.logo::after {
+
+    content: "";
+
+    display: inline-block;
+
+    width: 8px;
+    height: 8px;
+
+    margin-left: 5px;
+
+    border-radius: 50%;
+
+    background: var(--lime);
+}
+
+
+/* Header privacy text */
+
+.privacy-label {
+
+    color: var(--muted);
+
+    font-size: 0.78rem;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero {
+
+    padding:
+        55px 0
+        40px;
+}
+
+
+.hero-title {
+
+    width: 100%;
+
+    padding:
+        30px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--fog);
+
+    border:
+        2px solid
+        var(--deep-teal);
+}
+
+
+/* Main heading */
+
+.hero-title h1 {
+
+    color: var(--deep-teal);
+
+    text-align: center;
+
+    font-size:
+        clamp(
+            2rem,
+            5vw,
+            4rem
+        );
+
+    font-weight: 500;
+
+    line-height: 1.15;
+
+    letter-spacing: -0.045em;
+}
+
+
+/* =========================================
+   INCIDENT SECTION
+   ========================================= */
+
+.incidents {
+
+    padding:
+        25px 0
+        90px;
+}
+
+
+.incidents h2 {
+
+    margin-bottom: 35px;
+
+    color: var(--deep-teal);
+
+    font-size:
+        clamp(
+            1.8rem,
+            4vw,
+            2.5rem
+        );
+
+    font-weight: 500;
+
+    letter-spacing: -0.035em;
+}
+
+
+/* =========================================
+   INCIDENT GRID
+   ========================================= */
+
+.incident-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+
+/* =========================================
+   INCIDENT CARDS
+   ========================================= */
+
+.incident-card {
+
+    min-height: 105px;
+
+    padding:
+        20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background: var(--white);
+
+    border:
+        1.5px solid
+        var(--deep-teal);
+
+    color: var(--deep-teal);
+
+    cursor: pointer;
+
+    font-size: 0.95rem;
+
+    font-weight: 600;
+
+    line-height: 1.35;
+
+    transition:
+        background 0.18s ease,
+        color 0.18s ease,
+        transform 0.18s ease;
+}
+
+
+/* Hover */
+
+.incident-card:hover {
+
+    background:
+        var(--lime);
+
+    color:
+        var(--deep-teal);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* Keyboard focus */
+
+.incident-card:focus-visible {
+
+    outline:
+        3px solid
+        var(--lime);
+
+    outline-offset: 4px;
+}
+
+
+/* Click */
+
+.incident-card:active {
+
+    transform:
+        translateY(0);
+}
+
+
+/* =========================================
+   PRIVACY
+   ========================================= */
+
+.privacy {
+
+    padding-bottom:
+        90px;
+}
+
+
+.privacy-box {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 50px;
+
+    padding:
+        38px;
+
+    background:
+        var(--deep-teal);
+
+    color: var(--white);
+}
+
+
+/* Privacy label */
+
+.privacy-heading span {
+
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    padding:
+        5px 10px;
+
+    background:
+        var(--lime);
+
+    color:
+        var(--deep-teal);
+
+    font-size: 0.72rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+}
+
+
+/* Privacy heading */
+
+.privacy-heading h2 {
+
+    font-size:
+        clamp(
+            1.6rem,
+            3vw,
+            2.2rem
+        );
+
+    font-weight: 500;
+
+    line-height: 1.2;
+}
+
+
+/* Privacy details */
+
+.privacy-details {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 14px;
+}
+
+
+.privacy-details p {
+
+    color:
+        #dce3e4;
+
+    font-size:
+        0.95rem;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.footer {
+
+    padding:
+        30px 0;
+
+    background:
+        var(--fog);
+
+    color:
+        var(--muted);
+
+    font-size:
+        0.78rem;
+}
+
+
+.footer p + p {
+
+    margin-top: 4px;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 850px) {
+
+    .incident-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .privacy-box {
+
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .container {
+
+        width:
+            calc(100% - 28px);
+    }
+
+
+    .header-content {
+
+        height: 64px;
+    }
+
+
+    .logo {
+
+        font-size: 1.3rem;
+    }
+
+
+    .privacy-label {
+
+        font-size: 0.72rem;
+    }
+
+
+    /* Hero */
+
+    .hero {
+
+        padding:
+            28px 0
+            25px;
+    }
+
+
+    .hero-title {
+
+        padding:
+            28px 16px;
+    }
+
+
+    .hero-title h1 {
+
+        font-size:
+            clamp(
+                2rem,
+                10vw,
+                3rem
+            );
+    }
+
+
+    /* Incident section */
+
+    .incidents {
+
+        padding:
+            15px 0
+            60px;
+    }
+
+
+    .incidents h2 {
+
+        margin-bottom:
+            25px;
+
+        font-size:
+            1.8rem;
+    }
+
+
+    /* Cards */
+
+    .incident-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 12px;
+    }
+
+
+    .incident-card {
+
+        min-height:
+            76px;
+
+        padding:
+            16px;
+    }
+
+
+    /* Privacy */
+
+    .privacy {
+
+        padding-bottom:
+            60px;
+    }
+
+
+    .privacy-box {
+
+        padding:
+            28px 22px;
+    }
+
+}
+
+
+/* =========================================
+   GUIDE PAGE
+   ========================================= */
+
+
+/* =========================================
+   GUIDE HERO
+   ========================================= */
+
+.guide-hero {
+
+    padding:
+        45px 0
+        65px;
+
+    background:
+        var(--fog);
+}
+
+
+.back-link {
+
+    display: inline-block;
+
+    margin-bottom:
+        45px;
+
+    color:
+        var(--deep-teal);
+
+    text-decoration: none;
+
+    font-size:
+        0.85rem;
+
+    font-weight:
+        600;
+}
+
+
+.back-link:hover {
+
+    text-decoration:
+        underline;
+}
+
+
+.guide-title {
+
+    max-width:
+        780px;
+}
+
+
+.guide-label {
+
+    margin-bottom:
+        14px;
+
+    color:
+        var(--muted);
+
+    font-size:
+        0.72rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.12em;
+}
+
+
+.guide-title h1 {
+
+    margin-bottom:
+        20px;
+
+    color:
+        var(--deep-teal);
+
+    font-size:
+        clamp(
+            2.4rem,
+            6vw,
+            4.5rem
+        );
+
+    font-weight:
+        500;
+
+    line-height:
+        1.05;
+
+    letter-spacing:
+        -0.055em;
+}
+
+
+.guide-title > p:last-child {
+
+    max-width:
+        650px;
+
+    color:
+        var(--muted);
+
+    font-size:
+        1.05rem;
+
+    line-height:
+        1.7;
+}
+
+
+/* =========================================
+   GUIDE SECTION
+   ========================================= */
+
+.guide-section {
+
+    padding:
+        85px 0;
+}
+
+
+.light-section {
+
+    background:
+        #f7f7f5;
+}
+
+
+/* =========================================
+   SECTION HEADING
+   ========================================= */
+
+.section-heading {
+
+    margin-bottom:
+        35px;
+}
+
+
+.section-heading > span {
+
+    display:
+        inline-block;
+
+    margin-bottom:
+        10px;
+
+    color:
+        var(--muted);
+
+    font-size:
+        0.7rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.1em;
+}
+
+
+.section-heading h2 {
+
+    color:
+        var(--deep-teal);
+
+    font-size:
+        clamp(
+            1.8rem,
+            4vw,
+            2.7rem
+        );
+
+    font-weight:
+        500;
+
+    letter-spacing:
+        -0.04em;
+}
+
+
+/* =========================================
+   GUIDE CARDS
+   ========================================= */
+
+.guide-cards {
+
+    display:
+        grid;
+
+    gap:
+        14px;
+}
+
+
+.guide-card {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        45px 1fr;
+
+    gap:
+        20px;
+
+    padding:
+        25px;
+
+    background:
+        var(--white);
+
+    border:
+        1px solid
+        var(--border);
+}
+
+
+.guide-number {
+
+    width:
+        38px;
+
+    height:
+        38px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    background:
+        var(--lime);
+
+    color:
+        var(--deep-teal);
+
+    font-size:
+        0.75rem;
+
+    font-weight:
+        800;
+}
+
+
+.guide-card h3 {
+
+    margin-bottom:
+        7px;
+
+    color:
+        var(--deep-teal);
+
+    font-size:
+        1.05rem;
+
+    font-weight:
+        700;
+}
+
+
+.guide-card p {
+
+    color:
+        var(--muted);
+
+    font-size:
+        0.92rem;
+
+    line-height:
+        1.65;
+}
+
+
+/* =========================================
+   INFORMATION BOX
+   ========================================= */
+
+.information-box {
+
+    max-width:
+        800px;
+
+    padding:
+        30px;
+
+    background:
+        var(--white);
+
+    border:
+        1px solid
+        var(--border);
+}
+
+
+.information-box p {
+
+    color:
+        var(--muted);
+
+    line-height:
+        1.7;
+}
+
+
+.information-box p + p {
+
+    margin-top:
+        14px;
+}
+
+
+.information-box strong {
+
+    display:
+        block;
+
+    margin-top:
+        20px;
+
+    color:
+        var(--deep-teal);
+
+    font-size:
+        0.9rem;
+}
+
+
+/* =========================================
+   REPORT SECTION
+   ========================================= */
+
+.report-section {
+
+    padding:
+        90px 0;
+
+    background:
+        var(--deep-teal);
+
+    color:
+        var(--white);
+}
+
+
+.report-header {
+
+    max-width:
+        720px;
+
+    margin-bottom:
+        60px;
+}
+
+
+.report-label {
+
+    margin-bottom:
+        12px;
+
+    color:
+        var(--lime);
+
+    font-size:
+        0.72rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.12em;
+}
+
+
+.report-header h2 {
+
+    margin-bottom:
+        15px;
+
+    font-size:
+        clamp(
+            2rem,
+            5vw,
+            3.2rem
+        );
+
+    font-weight:
+        500;
+
+    line-height:
+        1.15;
+
+    letter-spacing:
+        -0.04em;
+}
+
+
+.report-header > p:last-child {
+
+    color:
+        #cbd4d5;
+
+    line-height:
+        1.7;
+}
+
+
+/* =========================================
+   REPORT STEPS
+   ========================================= */
+
+.report-step {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        55px 1fr;
+
+    gap:
+        25px;
+
+    max-width:
+        800px;
+
+    padding:
+        32px 0;
+
+    border-top:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.15
+        );
+}
+
+
+.step-number {
+
+    width:
+        42px;
+
+    height:
+        42px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    background:
+        var(--lime);
+
+    color:
+        var(--deep-teal);
+
+    font-size:
+        0.75rem;
+
+    font-weight:
+        800;
+}
+
+
+.step-content h3 {
+
+    margin-bottom:
+        9px;
+
+    color:
+        var(--white);
+
+    font-size:
+        1.1rem;
+}
+
+
+.step-content p {
+
+    max-width:
+        680px;
+
+    color:
+        #cbd4d5;
+
+    font-size:
+        0.94rem;
+
+    line-height:
+        1.7;
+}
+
+
+.step-content p + p {
+
+    margin-top:
+        10px;
+}
+
+
+/* =========================================
+   OFFICIAL BUTTON
+   ========================================= */
+
+.official-button {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+    margin-top:
+        22px;
+
+    padding:
+        13px 18px;
+
+    background:
+        var(--lime);
+
+    color:
+        var(--deep-teal);
+
+    text-decoration:
+        none;
+
+    font-size:
+        0.9rem;
+
+    font-weight:
+        800;
+
+    border:
+        1px solid
+        var(--lime);
+
+    transition:
+        transform 0.15s ease,
+        background 0.15s ease;
+}
+
+
+.official-button:hover {
+
+    background:
+        #ffffff;
+
+    transform:
+        translateY(-2px);
+}
+
+
+.official-button:focus-visible {
+
+    outline:
+        3px solid
+        var(--white);
+
+    outline-offset:
+        3px;
+}
+
+
+.official-button span {
+
+    font-size:
+        1.1rem;
+}
+
+
+/* =========================================
+   INCIDENT-SPECIFIC OFFICIAL LINK
+   ========================================= */
+
+.incident-official-link {
+
+    margin-top:
+        25px;
+}
+
+
+/* =========================================
+   IMPORTANT BOX
+   ========================================= */
+
+.important-box {
+
+    max-width:
+        800px;
+
+    margin-top:
+        35px;
+
+    padding:
+        24px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.08
+        );
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.15
+        );
+}
+
+
+.important-box span {
+
+    display:
+        inline-block;
+
+    margin-bottom:
+        8px;
+
+    color:
+        var(--lime);
+
+    font-size:
+        0.7rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.1em;
+}
+
+
+.important-box p {
+
+    color:
+        #d7dede;
+
+    font-size:
+        0.9rem;
+
+    line-height:
+        1.65;
+}
+
+
+/* =========================================
+   OFFICIAL PORTAL CTA
+   ========================================= */
+
+.official-section {
+
+    padding:
+        80px 0;
+}
+
+
+.official-box {
+
+    padding:
+        45px;
+
+    background:
+        var(--lime);
+
+    color:
+        var(--deep-teal);
+}
+
+
+.official-box > p {
+
+    margin-bottom:
+        8px;
+
+    font-size:
+        0.8rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.08em;
+}
+
+
+.official-box h2 {
+
+    margin-bottom:
+        5px;
+
+    font-size:
+        clamp(
+            1.6rem,
+            4vw,
+            2.4rem
+        );
+
+    font-weight:
+        500;
+
+    line-height:
+        1.2;
+
+    letter-spacing:
+        -0.035em;
+}
+
+
+.official-box .official-button {
+
+    background:
+        var(--deep-teal);
+
+    color:
+        var(--white);
+
+    border-color:
+        var(--deep-teal);
+}
+
+
+.official-box .official-button:hover {
+
+    background:
+        var(--white);
+
+    color:
+        var(--deep-teal);
+}
+
+
+.official-box small {
+
+    display:
+        block;
+
+    margin-top:
+        14px;
+
+    color:
+        #526064;
+
+    font-size:
+        0.75rem;
+}
+
+
+/* =========================================
+   GUIDE MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .guide-hero {
+
+        padding:
+            30px 0
+            50px;
+    }
+
+
+    .back-link {
+
+        margin-bottom:
+            35px;
+    }
+
+
+    .guide-section {
+
+        padding:
+            60px 0;
+    }
+
+
+    .guide-card {
+
+        grid-template-columns:
+            38px 1fr;
+
+        gap:
+            14px;
+
+        padding:
+            20px;
+    }
+
+
+    .guide-number {
+
+        width:
+            32px;
+
+        height:
+            32px;
+    }
+
+
+    .report-section {
+
+        padding:
+            65px 0;
+    }
+
+
+    .report-step {
+
+        grid-template-columns:
+            40px 1fr;
+
+        gap:
+            16px;
+
+        padding:
+            26px 0;
+    }
+
+
+    .step-number {
+
+        width:
+            34px;
+
+        height:
+            34px;
+    }
+
+
+    .official-box {
+
+        padding:
+            30px 22px;
+    }
+
+}
+
+
+/* =========================================
+   REPORT OPTIONS
+   ========================================= */
+
+.report-options {
+
+    display:
+        grid;
+
+    gap:
+        10px;
+
+    margin-top:
+        25px;
+
+    max-width:
+        650px;
+}
+
+
+.report-option {
+
+    padding:
+        18px 20px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.07
+        );
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.14
+        );
+}
+
+
+.report-option strong {
+
+    display:
+        block;
+
+    margin-bottom:
+        5px;
+
+    color:
+        var(--white);
+
+    font-size:
+        0.95rem;
+}
+
+
+.report-option span {
+
+    display:
+        block;
+
+    color:
+        #cbd4d5;
+
+    font-size:
+        0.85rem;
+
+    line-height:
+        1.5;
+}
